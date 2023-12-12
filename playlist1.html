@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiora</title>
+    <link rel="icon" type="image/png" href="/favicons/audiora-favicon-white.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="#">
+                <img src="./high res png/audiora-high-resolution-logo-white-transparent.png" alt="Logo" />
+            </a>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <span class="fa fa-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa fa-search"></span>
+                        <span>Search</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-book"></span>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-plus-square"></span>
+                        <span>Playlist</span>
+                    </a>
+                </li>
+
+                <li>
+
+                    <a href="#">
+                        <span class="fa fas fa-heart"></span>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="policies">
+            <ul>
+                <li>
+                    <a href="#">Cookies</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <button type="button" class="fa fas fa-chevron-left"></button>
+                <button type="button" class="fa fas fa-chevron-right"></button>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Download</a>
+                    </li>
+                    <li class="divider">|</li>
+                    <li>
+                        <a href="#">Sign Up</a>
+                    </li>
+                </ul>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="nowPlaying">
+            <img src="BlackSquare.jpg" id="poster_masterPlay">
+            <h4 id="masterTitle">
+                <div class="subtitle"> </div>
+            </h4>
+        </div>
+
+        <div class="icons">
+            <i class="fa-solid fa-backward-step" id="back"></i>
+            <i class="fa-solid fa-play" id="masterPlay"></i>
+            <i class="fa-solid fa-forward-step" id="next"></i>
+        </div>
+
+        <span id="currentStart">0:00</span>
+        <div class="bar">
+            <input type="range" id="seek" min="0" value="0" max="100">
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
+        </div>
+        <span id="currentEnd">0:00</span>
+
+        <div class="vol">
+            <i class="fa fa-solid fa-volume-low" id="vol_icon"></i>
+            <input type="range" id="vol" min="0" value="0" max="100">
+            <div class="vol_bar"></div>
+            <div class="dot" id="vol_dot"></div>
+        </div>
+    </div>
+
+    <div class="playlist">
+        <div class="playlistItem">
+            <li>
+                <div class="playlistCover">
+                    <img src="/covers/Chart-Topping-Hits-cover.jpg" alt="cover">
+                </div>
+                <div class="playlistInfo">
+                    <span>Chart Topping Hits</span>
+                    <h5>Top 60 hits from the last few years!</h5>
+                    <p>Made for you ● 60 Songs, 3 hr 17 min</p>
+                    <!-- <i class="fa songPlay fa-play" id="playlistPlay"></i> -->
+                </div>
+            </li>
+        </div>
+        <div class="songHeader">
+            <li>
+                <p1>#</p1>
+                <p2>Title</p2>
+                <p3>Album</p3>
+                <i class="fa-regular fa-clock"></i>
+            </li>
+        </div>
+        <hr>
+        <div class="songList">
+            <li class="songItem">
+                <span>1</span>
+                <i class="fa songPlay fa-play" id="1"></i>
+                <img src="/covers/all covers/1.jpg" alt="">
+                <h4 id="songName">Blinding Lights
+                    <div class="subtitle">The Weeknd</div>
+                </h4>
+                <div class="album">After Hours (Delux)</div>
+                <div class="songDuration" id="sd">03:20</div>
+            </li>
+            <li class="songItem">
+                <span>2</span>
+                <i class="fa songPlay fa-play" id="2"></i>
+                <img src="/covers/all covers/2.jpg" alt="">
+                <h4 id="songName">Be Alright
+                    <div class="subtitle">Dean Lewis</div>
+                </h4>
+                <div class="album">Be Alright</div>
+                <div class="songDuration" id="sd">03:19</div>
+            </li>
+            <li class="songItem">
+                <span>3</span>
+                <i class="fa songPlay fa-play" id="3"></i>
+                <img src="/covers/all covers/3.jpg" alt="">
+                <h4 id="songName">Attention
+                    <div class="subtitle">Charlie Puth</div>
+                </h4>
+                <div class="album">Voicenotes</div>
+                <div class="songDuration" id="sd">03:31</div>
+            </li>
+            <li class="songItem">
+                <span>4</span>
+                <i class="fa songPlay fa-play" id="4"></i>
+                <img src="/covers/all covers/4.jpg" alt="">
+                <h4 id="songName">Bad Liar
+                    <div class="subtitle">Imagine Dragons</div>
+                </h4>
+                <div class="album">Origins (Delux)</div>
+                <div class="songDuration" id="sd">04:20</div>
+            </li>
+            <li class="songItem">
+                <span>5</span>
+                <i class="fa songPlay fa-play" id="5"></i>
+                <img src="/covers/all covers/5.jpg" alt="">
+                <h4 id="songName">Bones
+                    <div class="subtitle">Imagine Dragons</div>
+                </h4>
+                <div class="album">Bones</div>
+                <div class="songDuration" id="sd">02:45</div>
+            </li>
+            <li class="songItem">
+                <span>6</span>
+                <i class="fa songPlay fa-play" id="6"></i>
+                <img src="/covers/all covers/6.jpg" alt="">
+                <h4 id="songName">Before You Go
+                    <div class="subtitle">Lewis Capaldi</div>
+                </h4>
+                <div class="album">Divinely Uninspired To A Hellish Extent (Extended Edition)</div>
+                <div class="songDuration" id="sd">03:35</div>
+            </li>
+            <li class="songItem">
+                <span>7</span>
+                <i class="fa songPlay fa-play" id="7"></i>
+                <img src="/covers/all covers/7.jpg" alt="">
+                <h4 id="songName">One Call Away
+                    <div class="subtitle">Charlie Puth</div>
+                </h4>
+                <div class="album">Nine Track Mind</div>
+                <div class="songDuration" id="sd">03:14</div>
+            </li>
+            <li class="songItem">
+                <span>8</span>
+                <i class="fa songPlay fa-play" id="8"></i>
+                <img src="/covers/all covers/8.jpg" alt="">
+                <h4 id="songName">Die For You (with Ariana Grande) - Remix
+                    <div class="subtitle">The Weeknd; Ariana Grande</div>
+                </h4>
+                <div class="album">Die For You</div>
+                <div class="songDuration" id="sd">03:52</div>
+            </li>
+            <li class="songItem">
+                <span>9</span>
+                <i class="fa songPlay fa-play" id="9"></i>
+                <img src="/covers/all covers/9.jpg" alt="">
+                <h4 id="songName">Alone, Pt. II
+                    <div class="subtitle">Alan Walker, Ava Max</div>
+                </h4>
+                <div class="album">Alone, Pt. II</div>
+                <div class="songDuration" id="sd">02:59</div>
+            </li>
+            <li class="songItem">
+                <span>10</span>
+                <i class="fa songPlay fa-play" id="10"></i>
+                <img src="/covers/all covers/10.jpg" alt="">
+                <h4 id="songName">Let Me Down Slowly
+                    <div class="subtitle">Alec Benjamin</div>
+                </h4>
+                <div class="album">Narrated For You</div>
+                <div class="songDuration" id="sd">02:49</div>
+            </li>
+            <li class="songItem">
+                <span>11</span>
+                <i class="fa songPlay fa-play" id="11"></i>
+                <img src="/covers/all covers/11.jpg" alt="">
+                <h4 id="songName">It's You
+                    <div class="subtitle">Ali Gatie</div>
+                </h4>
+                <div class="album">YOU</div>
+                <div class="songDuration" id="sd">03:32</div>
+            </li>
+            <li class="songItem">
+                <span>12</span>
+                <i class="fa songPlay fa-play" id="12"></i>
+                <img src="/covers/all covers/12.jpg" alt="">
+                <h4 id="songName">2002
+                    <div class="subtitle">Anne-Marie</div>
+                </h4>
+                <div class="album">Speak Your Mind (Delux)</div>
+                <div class="songDuration" id="sd">03:07</div>
+            </li>
+            <li class="songItem">
+                <span>13</span>
+                <i class="fa songPlay fa-play" id="13"></i>
+                <img src="/covers/all covers/13.jpg" alt="">
+                <h4 id="songName">Eastside (with Halsey & Khalid)
+                    <div class="subtitle">benny blanco; Halsey; Khalid</div>
+                </h4>
+                <div class="album">Eastside (with Halsey & Khalid)</div>
+                <div class="songDuration" id="sd">02:53</div>
+            </li>
+            <li class="songItem">
+                <span>14</span>
+                <i class="fa songPlay fa-play" id="14"></i>
+                <img src="/covers/all covers/14.jpg" alt="">
+                <h4 id="songName">Falling 
+                    <div class="subtitle">Trevor Daniel</div>
+                </h4>
+                <div class="album">Nicotine</div>
+                <div class="songDuration" id="sd">02:39</div>
+            </li>
+            <li class="songItem">
+                <span>15</span>
+                <i class="fa songPlay fa-play" id="15"></i>
+                <img src="/covers/all covers/15.jpg" alt="">
+                <h4 id="songName">lovely (with Khalid)
+                    <div class="subtitle">Billie Eilish; Khalid</div>
+                </h4>
+                <div class="album">lovely (with Khalid)</div>
+                <div class="songDuration" id="sd">03:20</div>
+            </li>
+            <li class="songItem">
+                <span>16</span>
+                <i class="fa songPlay fa-play" id="16"></i>
+                <img src="/covers/all covers/16.jpg" alt="">
+                <h4 id="songName">The Middle
+                    <div class="subtitle">Zedd; Maren Morris; Grey</div>
+                </h4>
+                <div class="album">The Middle</div>
+                <div class="songDuration" id="sd">03:04</div>
+            </li>
+            <li class="songItem">
+                <span>17</span>
+                <i class="fa songPlay fa-play" id="17"></i>
+                <img src="/covers/all covers/17.jpg" alt="">
+                <h4 id="songName">Glad You Exist
+                    <div class="subtitle">Dan + Shay</div>
+                </h4>
+                <div class="album">Good Things</div>
+                <div class="songDuration" id="sd">02:24</div>
+            </li>
+            <li class="songItem">
+                <span>18</span>
+                <i class="fa songPlay fa-play" id="18"></i>
+                <img src="/covers/all covers/18.jpg" alt="">
+                <h4 id="songName">I'm Good (Blue)
+                    <div class="subtitle">David Guetta; Bebe Rexha</div>
+                </h4>
+                <div class="album">I'm Good (Blue)</div>
+                <div class="songDuration" id="sd">02:25</div>
+            </li>
+            <li class="songItem">
+                <span>19</span>
+                <i class="fa songPlay fa-play" id="19"></i>
+                <img src="/covers/all covers/19.jpg" alt="">
+                <h4 id="songName">Levitating (feat. DaBaby)
+                    <div class="subtitle">Dua Lipa; DaBaby</div>
+                </h4>
+                <div class="album">Future Nostalgia</div>
+                <div class="songDuration" id="sd">03:23</div>
+            </li>
+            <li class="songItem">
+                <span>20</span>
+                <i class="fa songPlay fa-play" id="20"></i>
+                <img src="/covers/all covers/20.jpg" alt="">
+                <h4 id="songName">Arcade
+                    <div class="subtitle">Duncan Laurence</div>
+                </h4>
+                <div class="album">Small Town Boy</div>
+                <div class="songDuration" id="sd">03:05</div>
+            </li>
+            <li class="songItem">
+                <span>21</span>
+                <i class="fa songPlay fa-play" id="21"></i>
+                <img src="/covers/all covers/21.jpg" alt="">
+                <h4 id="songName">Bad Habits
+                    <div class="subtitle">Ed Sheeran</div>
+                </h4>
+                <div class="album">=</div>
+                <div class="songDuration" id="sd">03:50</div>
+            </li>
+            <li class="songItem">
+                <span>22</span>
+                <i class="fa songPlay fa-play" id="22"></i>
+                <img src="/covers/all covers/22.jpg" alt="">
+                <h4 id="songName">MIDDLE OF THE NIGHT
+                    <div class="subtitle">Elley Duhé</div>
+                </h4>
+                <div class="album">MIDDLE OF THE NIGHT</div>
+                <div class="songDuration" id="sd">03:04</div>
+            </li>
+            <li class="songItem">
+                <span>23</span>
+                <i class="fa songPlay fa-play" id="23"></i>
+                <img src="/covers/all covers/23.jpg" alt="">
+                <h4 id="songName">Hate Me (with Juice WRLD)
+                    <div class="subtitle">Ellie Goulding; Juice WRLD</div>
+                </h4>
+                <div class="album">Hate Me (with Juice WRLD)</div>
+                <div class="songDuration" id="sd">03:06</div>
+            </li>
+            <li class="songItem">
+                <span>24</span>
+                <i class="fa songPlay fa-play" id="24"></i>
+                <img src="/covers/all covers/24.jpg" alt="">
+                <h4 id="songName">Heat Waves
+                    <div class="subtitle">Glass Animals</div>
+                </h4>
+                <div class="album">Dreamland</div>
+                <div class="songDuration" id="sd">03:58</div>
+            </li>
+            <li class="songItem">
+                <span>25</span>
+                <i class="fa songPlay fa-play" id="25"></i>
+                <img src="/covers/all covers/25.jpg" alt="">
+                <h4 id="songName">Let Me Go (with Alesso, Florida Georgia Line & watt)
+                    <div class="subtitle">Hailee Steinfeld; Alesso; Florida Georgia Line; WATT</div>
+                </h4>
+                <div class="album">Let Me Go (with Alesso, Florida Georgia Line & watt)</div>
+                <div class="songDuration" id="sd">02:54</div>
+            </li>
+            <li class="songItem">
+                <span>26</span>
+                <i class="fa songPlay fa-play" id="26"></i>
+                <img src="/covers/all covers/26.jpg" alt="">
+                <h4 id="songName">Without Me
+                    <div class="subtitle">Halsey</div>
+                </h4>
+                <div class="album">Without Me</div>
+                <div class="songDuration" id="sd">03:21</div>
+            </li>
+            <li class="songItem">
+                <span>27</span>
+                <i class="fa songPlay fa-play" id="27"></i>
+                <img src="/covers/all covers/27.jpg" alt="">
+                <h4 id="songName">Sharks
+                    <div class="subtitle">Imagine Dragons</div>
+                </h4>
+                <div class="album">Mercury - Acts 1 & 2</div>
+                <div class="songDuration" id="sd">03:10</div>
+            </li>
+            <li class="songItem">
+                <span>28</span>
+                <i class="fa songPlay fa-play" id="28"></i>
+                <img src="/covers/all covers/28.jpg" alt="">
+                <h4 id="songName">Shivers
+                    <div class="subtitle">Ed Sheeran</div>
+                </h4>
+                <div class="album">=</div>
+                <div class="songDuration" id="sd">03:27</div>
+            </li>
+            <li class="songItem">
+                <span>29</span>
+                <i class="fa songPlay fa-play" id="29"></i>
+                <img src="/covers/all covers/29.jpg" alt="">
+                <h4 id="songName">Enemy (with JID) - from the series Arcane League of Legends
+                    <div class="subtitle">Imagine Dragons; JID; Arcane; League of Legends</div>
+                </h4>
+                <div class="album">Enemy (with JID) [from the series of Arcane League of Legends]</div>
+                <div class="songDuration" id="sd">02:53</div>
+            </li>
+            <li class="songItem">
+                <span>30</span>
+                <i class="fa songPlay fa-play" id="30"></i>
+                <img src="/covers/all covers/30.jpg" alt="">
+                <h4 id="songName">Rewrite The Stars (with James Arthur & Anne-Marie)
+                    <div class="subtitle">James Arthur; Anne-Marie</div>
+                </h4>
+                <div class="album">Rewirte The Stars (with James Arthur & Anne-Marie)</div>
+                <div class="songDuration" id="sd">03:47</div>
+            </li>
+            <li class="songItem">
+                <span>31</span>
+                <i class="fa songPlay fa-play" id="31"></i>
+                <img src="/covers/all covers/31.jpg" alt="">
+                <h4 id="songName">Take You Dancing
+                    <div class="subtitle">Jason Derulo</div>
+                </h4>
+                <div class="album">Take You Dancing</div>
+                <div class="songDuration" id="sd">03:10</div>
+            </li>
+            <li class="songItem">
+                <span>32</span>
+                <i class="fa songPlay fa-play" id="32"></i>
+                <img src="/covers/all covers/32.jpg" alt="">
+                <h4 id="songName">Infinity
+                    <div class="subtitle">Jaymes Young</div>
+                </h4>
+                <div class="album">Feel Something</div>
+                <div class="songDuration" id="sd">03:57</div>
+            </li>
+            <li class="songItem">
+                <span>33</span>
+                <i class="fa songPlay fa-play" id="33"></i>
+                <img src="/covers/all covers/33.jpg" alt="">
+                <h4 id="songName">comethru
+                    <div class="subtitle">Jeremy Zucker</div>
+                </h4>
+                <div class="album">summer,</div>
+                <div class="songDuration" id="sd">03:01</div>
+            </li>
+            <li class="songItem">
+                <span>34</span>
+                <i class="fa songPlay fa-play" id="34"></i>
+                <img src="/covers/all covers/34.jpg" alt="">
+                <h4 id="songName">Starboy
+                    <div class="subtitle">The Weeknd; Draft Punk</div>
+                </h4>
+                <div class="album">Starboy</div>
+                <div class="songDuration" id="sd">03:50</div>
+            </li>
+            <li class="songItem">
+                <span>35</span>
+                <i class="fa songPlay fa-play" id="35"></i>
+                <img src="/covers/all covers/35.jpg" alt="">
+                <h4 id="songName">Anyone
+                    <div class="subtitle">Justin Bieber</div>
+                </h4>
+                <div class="album">Anyone</div>
+                <div class="songDuration" id="sd">03:10</div>
+            </li>
+            <li class="songItem">
+                <span>36</span>
+                <i class="fa songPlay fa-play" id="36"></i>
+                <img src="/covers/all covers/36.jpg" alt="">
+                <h4 id="songName">Ghost
+                    <div class="subtitle">Justin Bieber</div>
+                </h4>
+                <div class="album">Justice</div>
+                <div class="songDuration" id="sd">02:33</div>
+            </li>
+            <li class="songItem">
+                <span>37</span>
+                <i class="fa songPlay fa-play" id="37"></i>
+                <img src="/covers/all covers/37.jpg" alt="">
+                <h4 id="songName">Intentions
+                    <div class="subtitle">Justin Bieber; Quavo</div>
+                </h4>
+                <div class="album">Intentions</div>
+                <div class="songDuration" id="sd">03:32</div>
+            </li>
+            <li class="songItem">
+                <span>38</span>
+                <i class="fa songPlay fa-play" id="38"></i>
+                <img src="/covers/all covers/38.jpg" alt="">
+                <h4 id="songName">golden hour
+                    <div class="subtitle">JVKE</div>
+                </h4>
+                <div class="album">this is what falling in love feels like (554Hz)</div>
+                <div class="songDuration" id="sd">03:29</div>
+            </li>
+            <li class="songItem">
+                <span>39</span>
+                <i class="fa songPlay fa-play" id="39"></i>
+                <img src="/covers/all covers/39.jpg" alt="">
+                <h4 id="songName">Aurora
+                    <div class="subtitle">K-391; RØRY</div>
+                </h4>
+                <div class="album">Aurora</div>
+                <div class="songDuration" id="sd">02:44</div>
+            </li>
+            <li class="songItem">
+                <span>40</span>
+                <i class="fa songPlay fa-play" id="40"></i>
+                <img src="/covers/all covers/40.jpg" alt="">
+                <h4 id="songName">Lose Somebody
+                    <div class="subtitle">Kygo; OneRepublic</div>
+                </h4>
+                <div class="album">Golden Hour</div>
+                <div class="songDuration" id="sd">03:19</div>
+            </li>
+            <li class="songItem">
+                <span>41</span>
+                <i class="fa songPlay fa-play" id="41"></i>
+                <img src="/covers/all covers/41.jpg" alt="">
+                <h4 id="songName">STAR WALKIN' (League of Legends Worlds Anthem)
+                    <div class="subtitle">Lil Nas X</div>
+                </h4>
+                <div class="album">START WALKIN' (League of Legends Worlds Anthem)</div>
+                <div class="songDuration" id="sd">03:30</div>
+            </li>
+            <li class="songItem">
+                <span>42</span>
+                <i class="fa songPlay fa-play" id="42"></i>
+                <img src="/covers/all covers/42.jpg" alt="">
+                <h4 id="songName">Beautiful Mistakes (feat. Megan Thee Stallion)
+                    <div class="subtitle">Maroon 5; Megan Thee Stallion</div>
+                </h4>
+                <div class="album">JORDI (Deluxe)</div>
+                <div class="songDuration" id="sd">03:47</div>
+            </li>
+            <li class="songItem">
+                <span>43</span>
+                <i class="fa songPlay fa-play" id="43"></i>
+                <img src="/covers/all covers/43.jpg" alt="">
+                <h4 id="songName">Sugar
+                    <div class="subtitle">Maroon 5</div>
+                </h4>
+                <div class="album">V</div>
+                <div class="songDuration" id="sd">03:55</div>
+            </li>
+            <li class="songItem">
+                <span>44</span>
+                <i class="fa songPlay fa-play" id="44"></i>
+                <img src="/covers/all covers/44.jpg" alt="">
+                <h4 id="songName">FRIENDS
+                    <div class="subtitle">Marshmello; Anne-Marie</div>
+                </h4>
+                <div class="album">FRIENDS</div>
+                <div class="songDuration" id="sd">03:22</div>
+            </li>
+            <li class="songItem">
+                <span>45</span>
+                <i class="fa songPlay fa-play" id="45"></i>
+                <img src="/covers/all covers/45.jpg" alt="">
+                <h4 id="songName">Happier
+                    <div class="subtitle">Marshmello; Bastille</div>
+                </h4>
+                <div class="album">Happier</div>
+                <div class="songDuration" id="sd">03:34</div>
+            </li>
+            <li class="songItem">
+                <span>46</span>
+                <i class="fa songPlay fa-play" id="46"></i>
+                <img src="/covers/all covers/46.jpg" alt="">
+                <h4 id="songName">Numb
+                    <div class="subtitle">Marshmello; Khalid</div>
+                </h4>
+                <div class="album">Numb</div>
+                <div class="songDuration" id="sd">02:35</div>
+            </li>
+            <li class="songItem">
+                <span>47</span>
+                <i class="fa songPlay fa-play" id="47"></i>
+                <img src="/covers/all covers/47.jpg" alt="">
+                <h4 id="songName">Silence
+                    <div class="subtitle">Marshmello; Khalid</div>
+                </h4>
+                <div class="album">Silence</div>
+                <div class="songDuration" id="sd">03:00</div>
+            </li>
+            <li class="songItem">
+                <span>48</span>
+                <i class="fa songPlay fa-play" id="48"></i>
+                <img src="/covers/all covers/48.jpg" alt="">
+                <h4 id="songName">Dusk Till Dawn (feat. Sia) - Radio Edit
+                    <div class="subtitle">ZAYN; Sia</div>
+                </h4>
+                <div class="album">Dusk Till Dawn (feat. Sia) [Radio Edit]</div>
+                <div class="songDuration" id="sd">03:59</div>
+            </li>
+            <li class="songItem">
+                <span>49</span>
+                <i class="fa songPlay fa-play" id="49"></i>
+                <img src="/covers/all covers/49.jpg" alt="">
+                <h4 id="songName">Night Changes
+                    <div class="subtitle">One Direction</div>
+                </h4>
+                <div class="album">FOUR (Deluxe)</div>
+                <div class="songDuration" id="sd">03:46</div>
+            </li>
+            <li class="songItem">
+                <span>50</span>
+                <i class="fa songPlay fa-play" id="50"></i>
+                <img src="/covers/all covers/50.jpg" alt="">
+                <h4 id="songName">Perfect
+                    <div class="subtitle">One Direction</div>
+                </h4>
+                <div class="album">Made In The A.M. (Deluxe Edition)</div>
+                <div class="songDuration" id="sd">03:50</div>
+            </li>
+            <li class="songItem">
+                <span>51</span>
+                <i class="fa songPlay fa-play" id="51"></i>
+                <img src="/covers/all covers/51.jpg" alt="">
+                <h4 id="songName">Story of My Life
+                    <div class="subtitle">One Direction</div>
+                </h4>
+                <div class="album">Midnight Memories (Deluxe)</div>
+                <div class="songDuration" id="sd">04:05</div>
+            </li>
+            <li class="songItem">
+                <span>52</span>
+                <i class="fa songPlay fa-play" id="52"></i>
+                <img src="/covers/all covers/52.jpg" alt="">
+                <h4 id="songName">At My Worst
+                    <div class="subtitle">Pink Sweat$</div>
+                </h4>
+                <div class="album">PINK PLANET</div>
+                <div class="songDuration" id="sd">02:50</div>
+            </li>
+            <li class="songItem">
+                <span>53</span>
+                <i class="fa songPlay fa-play" id="53"></i>
+                <img src="/covers/all covers/53.jpg" alt="">
+                <h4 id="songName">I Like You (A Happier Song) (with Doja Cat)
+                    <div class="subtitle">Post Malone; Doja Cat</div>
+                </h4>
+                <div class="album">Twelve Carat Toothache</div>
+                <div class="songDuration" id="sd">03:12</div>
+            </li>
+            <li class="songItem">
+                <span>54</span>
+                <i class="fa songPlay fa-play" id="54"></i>
+                <img src="/covers/all covers/54.jpg" alt="">
+                <h4 id="songName">One Right Now (with The Weeknd)
+                    <div class="subtitle">Post Malone; The Weeknd</div>
+                </h4>
+                <div class="album">One Right Now</div>
+                <div class="songDuration" id="sd">03:12</div>
+            </li>
+            <li class="songItem">
+                <span>55</span>
+                <i class="fa songPlay fa-play" id="55"></i>
+                <img src="/covers/all covers/55.jpg" alt="">
+                <h4 id="songName">SNAP
+                    <div class="subtitle">Rose Linn</div>
+                </h4>
+                <div class="album">SNAP</div>
+                <div class="songDuration" id="sd">02:59</div>
+            </li>
+            <li class="songItem">
+                <span>56</span>
+                <i class="fa songPlay fa-play" id="56"></i>
+                <img src="/covers/all covers/56.jpg" alt="">
+                <h4 id="songName">you broke me first
+                    <div class="subtitle">Tate McRae</div>
+                </h4>
+                <div class="album">you broke me first</div>
+                <div class="songDuration" id="sd">02:50</div>
+            </li>
+            <li class="songItem">
+                <span>57</span>
+                <i class="fa songPlay fa-play" id="57"></i>
+                <img src="/covers/all covers/57.jpg" alt="">
+                <h4 id="songName">WITHOUT YOU
+                    <div class="subtitle">The Kid LAROI</div>
+                </h4>
+                <div class="album">F*CK LOVE 3+: OVER YOU</div>
+                <div class="songDuration" id="sd">02:41</div>
+            </li>
+            <li class="songItem">
+                <span>58</span>
+                <i class="fa songPlay fa-play" id="58"></i>
+                <img src="/covers/all covers/58.jpg" alt="">
+                <h4 id="songName">Sunroof
+                    <div class="subtitle">Nicky Youre; dazy</div>
+                </h4>
+                <div class="album">Sunroof</div>
+                <div class="songDuration" id="sd">02:43</div>
+            </li>
+            <li class="songItem">
+                <span>59</span>
+                <i class="fa songPlay fa-play" id="59"></i>
+                <img src="/covers/all covers/59.jpg" alt="">
+                <h4 id="songName">Call You Mine
+                    <div class="subtitle">The Chainsmokers; Bebe Rexha</div>
+                </h4>
+                <div class="album">World War Joy</div>
+                <div class="songDuration" id="sd">03:37</div>
+            </li>
+            <li class="songItem">
+                <span>60</span>
+                <i class="fa songPlay fa-play" id="60"></i>
+                <img src="/covers/all covers/60.jpg" alt="">
+                <h4 id="songName">STAY (with Justin Bieber)
+                    <div class="subtitle">The Kid LAROI; Justin Bieber</div>
+                </h4>
+                <div class="album">STAY (with Justin Bieber)</div>
+                <div class="songDuration" id="sd">02:21</div>
+            </li>
+
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/58fcaacfd6.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

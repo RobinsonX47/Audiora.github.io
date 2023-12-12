@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiora</title>
+    <link rel="icon" type="image/png" href="/favicons/audiora-favicon-white.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="#">
+                <img src="./high res png/audiora-high-resolution-logo-white-transparent.png" alt="Logo" />
+            </a>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <span class="fa fa-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa fa-search"></span>
+                        <span>Search</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-book"></span>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-plus-square"></span>
+                        <span>Playlist</span>
+                    </a>
+                </li>
+
+                <li>
+
+                    <a href="#">
+                        <span class="fa fas fa-heart"></span>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="policies">
+            <ul>
+                <li>
+                    <a href="#">Cookies</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <button type="button" class="fa fas fa-chevron-left"></button>
+                <button type="button" class="fa fas fa-chevron-right"></button>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Download</a>
+                    </li>
+                    <li class="divider">|</li>
+                    <li>
+                        <a href="#">Sign Up</a>
+                    </li>
+                </ul>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="nowPlaying">
+            <img src="BlackSquare.jpg" id="poster_masterPlay">
+            <h4 id="masterTitle">
+                <div class="subtitle"> </div>
+            </h4>
+        </div>
+
+        <div class="icons">
+            <!-- <i class="fa shuffle fa-solid fa-music" id="masterNext"></i> -->
+            <i class="fa-solid fa-backward-step" id="back"></i>
+            <i class="fa-solid fa-play" id="masterPlay"></i>
+            <i class="fa-solid fa-forward-step" id="next"></i>
+        </div>
+
+        <span id="currentStart">0:00</span>
+        <div class="bar">
+            <input type="range" id="seek" min="0" value="0" max="100">
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
+        </div>
+        <span id="currentEnd">0:00</span>
+
+        <div class="vol">
+            <i class="fa fa-solid fa-volume-low" id="vol_icon"></i>
+            <input type="range" id="vol" min="0" value="0" max="100">
+            <div class="vol_bar"></div>
+            <div class="dot" id="vol_dot"></div>
+        </div>
+    </div>
+
+    <div class="playlist">
+        <div class="playlistItem">
+            <li>
+                <div class="playlistCover">
+                    <img src="/covers/Punjabi-100-cover.jpg" alt="cover">
+                </div>
+                <div class="playlistInfo">
+                    <span>Punjabi Top 100</span>
+                    <h5>Catch the hottest punjabi tracks!</h5>
+                    <p>Made for you ● 100 Songs, 5 hr 14 min</p>
+                    <!-- <i class="fa songPlay fa-play" id="playlistPlay"></i> -->
+                </div>
+            </li>
+        </div>
+        <div class="songHeader">
+            <li>
+                <p1>#</p1>
+                <p2>Title</p2>
+                <p3>Album</p3>
+                <i class="fa-regular fa-clock"></i>
+            </li>
+        </div>
+        <hr>
+        <div class="songList">
+            <li class="songItem">
+                <span>1</span>
+                <i class="fa songPlay fa-play" id="61"></i>
+                <img src="/covers/all covers/61.jpg" alt="">
+                <h4 id="songName">9:45
+                    <div class="subtitle">Prabh Singh, Jay Trak, Rooh Sandhu</div>
+                </h4>
+                <div class="album">9:45</div>
+                <div class="songDuration" id="sd">02:02</div>
+            </li>
+            <li class="songItem">
+                <span>2</span>
+                <i class="fa songPlay fa-play" id="62"></i>
+                <img src="/covers/all covers/62.jpg" alt="">
+                <h4 id="songName">12 Bande
+                    <div class="subtitle">Varinder Brar</div>
+                </h4>
+                <div class="album">12 Bande</div>
+                <div class="songDuration" id="sd">03:33</div>
+            </li>
+            <li class="songItem">
+                <span>3</span>
+                <i class="fa songPlay fa-play" id="63"></i>
+                <img src="/covers/all covers/63.jpg" alt="">
+                <h4 id="songName">52 Bars
+                    <div class="subtitle">Karan Aujla; Ikky</div>
+                </h4>
+                <div class="album">Four You</div>
+                <div class="songDuration" id="sd">03:41</div>
+            </li>
+            <li class="songItem">
+                <span>4</span>
+                <i class="fa songPlay fa-play" id="64"></i>
+                <img src="/covers/all covers/64.jpg" alt="">
+                <h4 id="songName">295
+                    <div class="subtitle">Sidhu Moose Wala</div>
+                </h4>
+                <div class="album">Moosetape</div>
+                <div class="songDuration" id="sd">04:32</div>
+            </li>
+            <li class="songItem">
+                <span>5</span>
+                <i class="fa songPlay fa-play" id="65"></i>
+                <img src="/covers/all covers/65.jpg" alt="">
+                <h4 id="songName">Aam Jahe Munde
+                    <div class="subtitle">Parmish Verma; PARDHAAN</div>
+                </h4>
+                <div class="album">Aam Jahe Munde</div>
+                <div class="songDuration" id="sd">04:15</div>
+            </li>
+            <li class="songItem">
+                <span>6</span>
+                <i class="fa songPlay fa-play" id="66"></i>
+                <img src="/covers/all covers/66.jpg" alt="">
+                <h4 id="songName">Admirin' You (feat. Preston Pablo)
+                    <div class="subtitle">Karan Aujla; Ikky; Preston Pablo</div>
+                </h4>
+                <div class="album">Admirin' You (feat. Preston Pablo)</div>
+                <div class="songDuration" id="sd">03:30</div>
+            </li>
+            <li class="songItem">
+                <span>7</span>
+                <i class="fa songPlay fa-play" id="67"></i>
+                <img src="/covers/all covers/67.jpg" alt="">
+                <h4 id="songName">Afterhours
+                    <div class="subtitle">Bir; Dhanju; thiarajxtt</div>
+                </h4>
+                <div class="album">Afterhours</div>
+                <div class="songDuration" id="sd">02:33</div>
+            </li>
+            <li class="songItem">
+                <span>8</span>
+                <i class="fa songPlay fa-play" id="68"></i>
+                <img src="/covers/all covers/68.jpg" alt="">
+                <h4 id="songName">Arjan Vailly (From "ANIMAL")
+                    <div class="subtitle">Manan Bhardwaj; Bhupinder Babbal</div>
+                </h4>
+                <div class="album">Arjan Vailly (From "ANIMAL")</div>
+                <div class="songDuration" id="sd">03:00</div>
+            </li>
+            <li class="songItem">
+                <span>9</span>
+                <i class="fa songPlay fa-play" id="69"></i>
+                <img src="/covers/all covers/69.jpg" alt="">
+                <h4 id="songName">Attraction
+                    <div class="subtitle">Sukha; Prodgk</div>
+                </h4>
+                <div class="album">Attraction</div>
+                <div class="songDuration" id="sd">03:04</div>
+            </li>
+            <li class="songItem">
+                <span>10</span>
+                <i class="fa songPlay fa-play" id="70"></i>
+                <img src="/covers/all covers/70.jpg" alt="">
+                <h4 id="songName">Ayee
+                    <div class="subtitle">Harnoor; Jass Dhillon; Ilam</div>
+                </h4>
+                <div class="album">Ayee</div>
+                <div class="songDuration" id="sd">02:25</div>
+            </li>
+            <li class="songItem">
+                <span>11</span>
+                <i class="fa songPlay fa-play" id="71"></i>
+                <img src="/covers/all covers/71.jpg" alt="">
+                <h4 id="songName">Back of Car
+                    <div class="subtitle">Prem Dhillon; San-B</div>
+                </h4>
+                <div class="album">Limitless</div>
+                <div class="songDuration" id="sd">03:02</div>
+            </li>
+            <li class="songItem">
+                <span>12</span>
+                <i class="fa songPlay fa-play" id="72"></i>
+                <img src="/covers/all covers/72.jpg" alt="">
+                <h4 id="songName">Baller
+                    <div class="subtitle">Subh; Ikky</div>
+                </h4>
+                <div class="album">Baller</div>
+                <div class="songDuration" id="sd">02:33</div>
+            </li>
+            <li class="songItem">
+                <span>13</span>
+                <i class="fa songPlay fa-play" id="73"></i>
+                <img src="/covers/all covers/73.jpg" alt="">
+                <h4 id="songName">Bewafa
+                    <div class="subtitle">Imran Khan</div>
+                </h4>
+                <div class="album">Bewafa</div>
+                <div class="songDuration" id="sd">08:50</div>
+            </li>
+            <li class="songItem">
+                <span>14</span>
+                <i class="fa songPlay fa-play" id="74"></i>
+                <img src="/covers/all covers/74.jpg" alt="">
+                <h4 id="songName">California Love
+                    <div class="subtitle">Cheema Y; Gur Sidhu</div>
+                </h4>
+                <div class="album">ANYWAY</div>
+                <div class="songDuration" id="sd">02:37</div>
+            </li>
+            <li class="songItem">
+                <span>15</span>
+                <i class="fa songPlay fa-play" id="75"></i>
+                <img src="/covers/all covers/75.jpg" alt="">
+                <h4 id="songName">Case
+                    <div class="subtitle">Diljit Dosanjh; Intense</div>
+                </h4>
+                <div class="album">Ghost</div>
+                <div class="songDuration" id="sd">02:15</div>
+            </li>
+            <li class="songItem">
+                <span>16</span>
+                <i class="fa songPlay fa-play" id="76"></i>
+                <img src="/covers/all covers/76.jpg" alt="">
+                <h4 id="songName">Chandigarh Ka Chokra
+                    <div class="subtitle">Sunanda Sharma</div>
+                </h4>
+                <div class="album">Chandigarh Ka Chokra</div>
+                <div class="songDuration" id="sd">02:27</div>
+            </li>
+            <li class="songItem">
+                <span>17</span>
+                <i class="fa songPlay fa-play" id="77"></i>
+                <img src="/covers/all covers/77.jpg" alt="">
+                <h4 id="songName">Check It Out
+                    <div class="subtitle">Parmish Verma; Paradox</div>
+                </h4>
+                <div class="album">Check It Out</div>
+                <div class="songDuration" id="sd">03:15</div>
+            </li>
+            <li class="songItem">
+                <span>18</span>
+                <i class="fa songPlay fa-play" id="78"></i>
+                <img src="/covers/all covers/78.jpg" alt="">
+                <h4 id="songName">Cheques
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">Still Rollin</div>
+                <div class="songDuration" id="sd">03:08</div>
+            </li>
+            <li class="songItem">
+                <span>19</span>
+                <i class="fa songPlay fa-play" id="79"></i>
+                <img src="/covers/all covers/79.jpg" alt="">
+                <h4 id="songName">Chorni
+                    <div class="subtitle">DIVINE; Sidhu Moose Wala</div>
+                </h4>
+                <div class="album">Chorni</div>
+                <div class="songDuration" id="sd">03:01</div>
+            </li>
+            <li class="songItem">
+                <span>20</span>
+                <i class="fa songPlay fa-play" id="80"></i>
+                <img src="/covers/all covers/80.jpg" alt="">
+                <h4 id="songName">Daku
+                    <div class="subtitle">Chani Nattan; Inderpal Moga</div>
+                </h4>
+                <div class="album">Daku</div>
+                <div class="songDuration" id="sd">02:20</div>
+            </li>
+            <li class="songItem">
+                <span>21</span>
+                <i class="fa songPlay fa-play" id="81"></i>
+                <img src="/covers/all covers/81.jpg" alt="">
+                <h4 id="songName">Dekhya Kite
+                    <div class="subtitle">Davy; Gur Sidhu; Simar Kaur</div>
+                </h4>
+                <div class="album">Dekhya Kite</div>
+                <div class="songDuration" id="sd">03:13</div>
+            </li>
+            <li class="songItem">
+                <span>22</span>
+                <i class="fa songPlay fa-play" id="82"></i>
+                <img src="/covers/all covers/82.jpg" alt="">
+                <h4 id="songName">Dil Nu
+                    <div class="subtitle">AP Dhillon; Shinda Kahlon</div>
+                </h4>
+                <div class="album">Two Hearts Never Break The Same</div>
+                <div class="songDuration" id="sd">03:53</div>
+            </li>
+            <li class="songItem">
+                <span>23</span>
+                <i class="fa songPlay fa-play" id="83"></i>
+                <img src="/covers/all covers/83.jpg" alt="">
+                <h4 id="songName">Dilawara
+                    <div class="subtitle">The PropheC; Ezu</div>
+                </h4>
+                <div class="album">Dilawara</div>
+                <div class="songDuration" id="sd">04:10</div>
+            </li>
+            <li class="songItem">
+                <span>24</span>
+                <i class="fa songPlay fa-play" id="84"></i>
+                <img src="/covers/all covers/84.jpg" alt="">
+                <h4 id="songName">Dior
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">Still Rollin</div>
+                <div class="songDuration" id="sd">02:28</div>
+            </li>
+            <li class="songItem">
+                <span>25</span>
+                <i class="fa songPlay fa-play" id="85"></i>
+                <img src="/covers/all covers/85.jpg" alt="">
+                <h4 id="songName">Distance Love
+                    <div class="subtitle">Zehr Vibe</div>
+                </h4>
+                <div class="album">Distance Love</div>
+                <div class="songDuration" id="sd">03:24</div>
+            </li>
+            <li class="songItem">
+                <span>26</span>
+                <i class="fa songPlay fa-play" id="86"></i>
+                <img src="/covers/all covers/86.jpg" alt="">
+                <h4 id="songName">Do You Know
+                    <div class="subtitle">Diljit Dosanjh</div>
+                </h4>
+                <div class="album">Do You Know</div>
+                <div class="songDuration" id="sd">03:39</div>
+            </li>
+            <li class="songItem">
+                <span>27</span>
+                <i class="fa songPlay fa-play" id="87"></i>
+                <img src="/covers/all covers/87.jpg" alt="">
+                <h4 id="songName">Elevated
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">Elevated</div>
+                <div class="songDuration" id="sd">03:49</div>
+            </li>
+            <li class="songItem">
+                <span>28</span>
+                <i class="fa songPlay fa-play" id="88"></i>
+                <img src="/covers/all covers/88.jpg" alt="">
+                <h4 id="songName">Everybody Hurts
+                    <div class="subtitle">Sidhu Moose Wala</div>
+                </h4>
+                <div class="album">No Name</div>
+                <div class="songDuration" id="sd">02:51</div>
+            </li>
+            <li class="songItem">
+                <span>29</span>
+                <i class="fa songPlay fa-play" id="89"></i>
+                <img src="/covers/all covers/89.jpg" alt="">
+                <h4 id="songName">Excuses
+                    <div class="subtitle">AP Dhillon; Gurinder Gill; Intense</div>
+                </h4>
+                <div class="album">Excuses</div>
+                <div class="songDuration" id="sd">02:56</div>
+            </li>
+            <li class="songItem">
+                <span>30</span>
+                <i class="fa songPlay fa-play" id="90"></i>
+                <img src="/covers/all covers/90.jpg" alt="">
+                <h4 id="songName">Gall Khaas
+                    <div class="subtitle">Zehr Vibe</div>
+                </h4>
+                <div class="album">Gall Khaas</div>
+                <div class="songDuration" id="sd">02:47</div>
+            </li>
+            <li class="songItem">
+                <span>31</span>
+                <i class="fa songPlay fa-play" id="91"></i>
+                <img src="/covers/all covers/91.jpg" alt="">
+                <h4 id="songName">Gangsta
+                    <div class="subtitle">Karan Aujla; YG</div>
+                </h4>
+                <div class="album">Way Ahead</div>
+                <div class="songDuration" id="sd">03:13</div>
+            </li>
+            <li class="songItem">
+                <span>32</span>
+                <i class="fa songPlay fa-play" id="92"></i>
+                <img src="/covers/all covers/92.jpg" alt="">
+                <h4 id="songName">GODSPEED
+                    <div class="subtitle">Tyson Sidhu</div>
+                </h4>
+                <div class="album">GODSPEED</div>
+                <div class="songDuration" id="sd">02:08</div>
+            </li>
+            <li class="songItem">
+                <span>33</span>
+                <i class="fa songPlay fa-play" id="93"></i>
+                <img src="/covers/all covers/93.jpg" alt="">
+                <h4 id="songName">Hass Hass
+                    <div class="subtitle">Diljit Dosanjh; Sia; Greg Kurstin</div>
+                </h4>
+                <div class="album">Hass Hass</div>
+                <div class="songDuration" id="sd">02:32</div>
+            </li>
+            <li class="songItem">
+                <span>34</span>
+                <i class="fa songPlay fa-play" id="94"></i>
+                <img src="/covers/all covers/94.jpg" alt="">
+                <h4 id="songName">Her
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">Her</div>
+                <div class="songDuration" id="sd">02:34</div>
+            </li>
+            <li class="songItem">
+                <span>35</span>
+                <i class="fa songPlay fa-play" id="95"></i>
+                <img src="/covers/all covers/95.jpg" alt="">
+                <h4 id="songName">Hussan Illahi
+                    <div class="subtitle">Wazir Patar</div>
+                </h4>
+                <div class="album">Back To Skool</div>
+                <div class="songDuration" id="sd">02:15</div>
+            </li>
+            <li class="songItem">
+                <span>36</span>
+                <i class="fa songPlay fa-play" id="96"></i>
+                <img src="/covers/all covers/96.jpg" alt="">
+                <h4 id="songName">Ice
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">Still Rollin</div>
+                <div class="songDuration" id="sd">02:54</div>
+            </li>
+            <li class="songItem">
+                <span>37</span>
+                <i class="fa songPlay fa-play" id="97"></i>
+                <img src="/covers/all covers/97.jpg" alt="">
+                <h4 id="songName">Ilzaam
+                    <div class="subtitle">Arjan Dhillon; Mxrci</div>
+                </h4>
+                <div class="album">Saror</div>
+                <div class="songDuration" id="sd">03:05</div>
+            </li>
+            <li class="songItem">
+                <span>38</span>
+                <i class="fa songPlay fa-play" id="98"></i>
+                <img src="/covers/all covers/98.jpg" alt="">
+                <h4 id="songName">Insane
+                    <div class="subtitle">AP Dhillon; Shinda Kahlon; Gurinder Gill; Gminxr</div>
+                </h4>
+                <div class="album">Insane</div>
+                <div class="songDuration" id="sd">03:23</div>
+            </li>
+            <li class="songItem">
+                <span>39</span>
+                <i class="fa songPlay fa-play" id="99"></i>
+                <img src="/covers/all covers/99.jpg" alt="">
+                <h4 id="songName">Jatt Vailly
+                    <div class="subtitle">Diljit Dosanjh; thiarajxtt</div>
+                </h4>
+                <div class="album">Ghost</div>
+                <div class="songDuration" id="sd">02:49</div>
+            </li>
+            <li class="songItem">
+                <span>40</span>
+                <i class="fa songPlay fa-play" id="100"></i>
+                <img src="/covers/all covers/100.jpg" alt="">
+                <h4 id="songName">Jawani
+                    <div class="subtitle">Arjan Dhillon</div>
+                </h4>
+                <div class="album">Jawani</div>
+                <div class="songDuration" id="sd">02:42</div>
+            </li>
+            <li class="songItem">
+                <span>41</span>
+                <i class="fa songPlay fa-play" id="101"></i>
+                <img src="/covers/all covers/101.jpg" alt="">
+                <h4 id="songName">JOURNEY
+                    <div class="subtitle">Amrit Maan; Mxrci</div>
+                </h4>
+                <div class="album">GLOBAL WARNING</div>
+                <div class="songDuration" id="sd">02:51</div>
+            </li>
+            <li class="songItem">
+                <span>42</span>
+                <i class="fa songPlay fa-play" id="102"></i>
+                <img src="/covers/all covers/102.jpg" alt="">
+                <h4 id="songName">Kamlee
+                    <div class="subtitle">SARRB; Starboy X</div>
+                </h4>
+                <div class="album">Kamlee</div>
+                <div class="songDuration" id="sd">03:28</div>
+            </li>
+            <li class="songItem">
+                <span>43</span>
+                <i class="fa songPlay fa-play" id="103"></i>
+                <img src="/covers/all covers/103.jpg" alt="">
+                <h4 id="songName">Khadaak
+                    <div class="subtitle">Shooter Kahlon; Shevy; Micheal</div>
+                </h4>
+                <div class="album">Khadaak</div>
+                <div class="songDuration" id="sd">02:39</div>
+            </li>
+            <li class="songItem">
+                <span>44</span>
+                <i class="fa songPlay fa-play" id="104"></i>
+                <img src="/covers/all covers/104.jpg" alt="">
+                <h4 id="songName">Kina Chir
+                    <div class="subtitle">The PropheC</div>
+                </h4>
+                <div class="album">The Lifestyle</div>
+                <div class="songDuration" id="sd">03:34</div>
+            </li>
+            <li class="songItem">
+                <span>45</span>
+                <i class="fa songPlay fa-play" id="105"></i>
+                <img src="/covers/all covers/105.jpg" alt="">
+                <h4 id="songName">KNOWN FACE
+                    <div class="subtitle">Amrit Maan; Deep Jandu</div>
+                </h4>
+                <div class="album">GLOBAL WARNING</div>
+                <div class="songDuration" id="sd">02:38</div>
+            </li>
+            <li class="songItem">
+                <span>46</span>
+                <i class="fa songPlay fa-play" id="106"></i>
+                <img src="/covers/all covers/106.jpg" alt="">
+                <h4 id="songName">Koka
+                    <div class="subtitle">Mankirt Aulakh; Simar Kaur</div>
+                </h4>
+                <div class="album">Koka</div>
+                <div class="songDuration" id="sd">03:21</div>
+            </li>
+            <li class="songItem">
+                <span>47</span>
+                <i class="fa songPlay fa-play" id="107"></i>
+                <img src="/covers/all covers/107.jpg" alt="">
+                <h4 id="songName">Lalkara
+                    <div class="subtitle">Diljit Dosanjh; Intense; Sultaan</div>
+                </h4>
+                <div class="album">Ghost</div>
+                <div class="songDuration" id="sd">02:40</div>
+            </li>
+            <li class="songItem">
+                <span>48</span>
+                <i class="fa songPlay fa-play" id="108"></i>
+                <img src="/covers/all covers/108.jpg" alt="">
+                <h4 id="songName">Lemonade
+                    <div class="subtitle">Diljit Dosanjh</div>
+                </h4>
+                <div class="album">Drive Thru</div>
+                <div class="songDuration" id="sd">02:46</div>
+            </li>
+            <li class="songItem">
+                <span>49</span>
+                <i class="fa songPlay fa-play" id="109"></i>
+                <img src="/covers/all covers/109.jpg" alt="">
+                <h4 id="songName">Love Sick
+                    <div class="subtitle">Sidhu Moose Wala; AR Paisley</div>
+                </h4>
+                <div class="album">No Name</div>
+                <div class="songDuration" id="sd">03:49</div>
+            </li>
+            <li class="songItem">
+                <span>50</span>
+                <i class="fa songPlay fa-play" id="110"></i>
+                <img src="/covers/all covers/110.jpg" alt="">
+                <h4 id="songName">Lover
+                    <div class="subtitle">Diljit Dosanjh</div>
+                </h4>
+                <div class="album">MoonChild Era</div>
+                <div class="songDuration" id="sd">03:07</div>
+            </li>
+            <li class="songItem">
+                <span>51</span>
+                <i class="fa songPlay fa-play" id="111"></i>
+                <img src="/covers/all covers/111.jpg" alt="">
+                <h4 id="songName">Mexico
+                    <div class="subtitle">Hunar Sidhu; Raees</div>
+                </h4>
+                <div class="album">Mexico</div>
+                <div class="songDuration" id="sd">02:45</div>
+            </li>
+            <li class="songItem">
+                <span>52</span>
+                <i class="fa songPlay fa-play" id="112"></i>
+                <img src="/covers/all covers/112.jpg" alt="">
+                <h4 id="songName">Mi Amor
+                    <div class="subtitle">Sharn; 40k; The Paul</div>
+                </h4>
+                <div class="album">Mi Amor</div>
+                <div class="songDuration" id="sd">03:23</div>
+            </li>
+            <li class="songItem">
+                <span>53</span>
+                <i class="fa songPlay fa-play" id="113"></i>
+                <img src="/covers/all covers/113.jpg" alt="">
+                <h4 id="songName">Mood Swings
+                    <div class="subtitle">Tegi Pannu; Manni Sandhu</div>
+                </h4>
+                <div class="album">Disturbing the Peace</div>
+                <div class="songDuration" id="sd">02:24</div>
+            </li>
+            <li class="songItem">
+                <span>54</span>
+                <i class="fa songPlay fa-play" id="114"></i>
+                <img src="/covers/all covers/114.jpg" alt="">
+                <h4 id="songName">Moon Rise
+                    <div class="subtitle">Guru Randhawa; Sanjoy</div>
+                </h4>
+                <div class="album">Mon Of The Moon</div>
+                <div class="songDuration" id="sd">02:57</div>
+            </li>
+            <li class="songItem">
+                <span>55</span>
+                <i class="fa songPlay fa-play" id="115"></i>
+                <img src="/covers/all covers/115.jpg" alt="">
+                <h4 id="songName">My Prime
+                    <div class="subtitle">Navaan Sandhu; bebhumika</div>
+                </h4>
+                <div class="album">Naveezy</div>
+                <div class="songDuration" id="sd">04:10</div>
+            </li>
+            <li class="songItem">
+                <span>56</span>
+                <i class="fa songPlay fa-play" id="116"></i>
+                <img src="/covers/all covers/116.jpg" alt="">
+                <h4 id="songName">Nimm Thalle
+                    <div class="subtitle">Jordan Sandhu; Desi Crew</div>
+                </h4>
+                <div class="album">Nimm Thalle</div>
+                <div class="songDuration" id="sd">03:03</div>
+            </li>
+            <li class="songItem">
+                <span>57</span>
+                <i class="fa songPlay fa-play" id="117"></i>
+                <img src="/covers/all covers/117.jpg" alt="">
+                <h4 id="songName">No Love
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">No Love</div>
+                <div class="songDuration" id="sd">02:50</div>
+            </li>
+            <li class="songItem">
+                <span>58</span>
+                <i class="fa songPlay fa-play" id="118"></i>
+                <img src="/covers/all covers/118.jpg" alt="">
+                <h4 id="songName">Note
+                    <div class="subtitle">Dilpreet Dhillon</div>
+                </h4>
+                <div class="album">Let's Go</div>
+                <div class="songDuration" id="sd">03:26</div>
+            </li>
+            <li class="songItem">
+                <span>59</span>
+                <i class="fa songPlay fa-play" id="119"></i>
+                <img src="/covers/all covers/119.jpg" alt="">
+                <h4 id="songName">Obsessed
+                    <div class="subtitle">Riar Saab; Abhijay Sharma</div>
+                </h4>
+                <div class="album">Obsessed</div>
+                <div class="songDuration" id="sd">03:03</div>
+            </li>
+            <li class="songItem">
+                <span>60</span>
+                <i class="fa songPlay fa-play" id="120"></i>
+                <img src="/covers/all covers/120.jpg" alt="">
+                <h4 id="songName">On Top
+                    <div class="subtitle">Karan Aujla</div>
+                </h4>
+                <div class="album">On Top</div>
+                <div class="songDuration" id="sd">03:06</div>
+            </li>
+            <li class="songItem">
+                <span>61</span>
+                <i class="fa songPlay fa-play" id="121"></i>
+                <img src="/covers/all covers/121.jpg" alt="">
+                <h4 id="songName">One Love
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">One Love</div>
+                <div class="songDuration" id="sd">02:39</div>
+            </li>
+            <li class="songItem">
+                <span>62</span>
+                <i class="fa songPlay fa-play" id="122"></i>
+                <img src="/covers/all covers/122.jpg" alt="">
+                <h4 id="songName">One Question
+                    <div class="subtitle">Tegi Pannu; Manni Shandu</div>
+                </h4>
+                <div class="album">Disturbing the Peace</div>
+                <div class="songDuration" id="sd">02:56</div>
+            </li>
+            <li class="songItem">
+                <span>63</span>
+                <i class="fa songPlay fa-play" id="123"></i>
+                <img src="/covers/all covers/123.jpg" alt="">
+                <h4 id="songName">P.O.V (Point of View)
+                    <div class="subtitle">Karan Aujla; Yeah Proof</div>
+                </h4>
+                <div class="album">P.O.V (Point of View)</div>
+                <div class="songDuration" id="sd">03:05</div>
+            </li>
+            <li class="songItem">
+                <span>64</span>
+                <i class="fa songPlay fa-play" id="124"></i>
+                <img src="/covers/all covers/124.jpg" alt="">
+                <h4 id="songName">Pagol
+                    <div class="subtitle">Deep Jandu; Bohemia</div>
+                </h4>
+                <div class="album">Pagol</div>
+                <div class="songDuration" id="sd">04:00</div>
+            </li>
+            <li class="songItem">
+                <span>65</span>
+                <i class="fa songPlay fa-play" id="125"></i>
+                <img src="/covers/all covers/125.jpg" alt="">
+                <h4 id="songName">Parshawan
+                    <div class="subtitle">Harnoor</div>
+                </h4>
+                <div class="album">Parshawan</div>
+                <div class="songDuration" id="sd">02:55</div>
+            </li>
+            <li class="songItem">
+                <span>66</span>
+                <i class="fa songPlay fa-play" id="126"></i>
+                <img src="/covers/all covers/126.jpg" alt="">
+                <h4 id="songName">Peaches
+                    <div class="subtitle">Diljit Dosanjh</div>
+                </h4>
+                <div class="album">Drive Thru</div>
+                <div class="songDuration" id="sd">03:11</div>
+            </li>
+            <li class="songItem">
+                <span>67</span>
+                <i class="fa songPlay fa-play" id="127"></i>
+                <img src="/covers/all covers/127.jpg" alt="">
+                <h4 id="songName">Players
+                    <div class="subtitle">Badshah; Karan Aujla; Devika Badyal</div>
+                </h4>
+                <div class="album">Players</div>
+                <div class="songDuration" id="sd">02:51</div>
+            </li>
+            <li class="songItem">
+                <span>68</span>
+                <i class="fa songPlay fa-play" id="128"></i>
+                <img src="/covers/all covers/128.jpg" alt="">
+                <h4 id="songName">Rank 1
+                    <div class="subtitle">Jordan Sandhu; Desi Crew</div>
+                </h4>
+                <div class="album">Jordan Sandhu Hits</div>
+                <div class="songDuration" id="sd">02:59</div>
+            </li>
+            <li class="songItem">
+                <span>69</span>
+                <i class="fa songPlay fa-play" id="129"></i>
+                <img src="/covers/all covers/129.jpg" alt="">
+                <h4 id="songName">Rubicon Drill
+                    <div class="subtitle">Laddi Chahal; Parmish Verma; Gurlez Akhtar</div>
+                </h4>
+                <div class="album">Forever</div>
+                <div class="songDuration" id="sd">03:10</div>
+            </li>
+            <li class="songItem">
+                <span>70</span>
+                <i class="fa songPlay fa-play" id="130"></i>
+                <img src="/covers/all covers/130.jpg" alt="">
+                <h4 id="songName">Rubicon
+                    <div class="subtitle">Prem Dhillon; Rass</div>
+                </h4>
+                <div class="album">Rubicon</div>
+                <div class="songDuration" id="sd">04:18</div>
+            </li>
+            <li class="songItem">
+                <span>71</span>
+                <i class="fa songPlay fa-play" id="131"></i>
+                <img src="/covers/all covers/131.jpg" alt="">
+                <h4 id="songName">Salute
+                    <div class="subtitle">Arjan Dhillon</div>
+                </h4>
+                <div class="album">Salute</div>
+                <div class="songDuration" id="sd">03:23</div>
+            </li>
+            <li class="songItem">
+                <span>72</span>
+                <i class="fa songPlay fa-play" id="132"></i>
+                <img src="/covers/all covers/132.jpg" alt="">
+                <h4 id="songName">Schedule
+                    <div class="subtitle">Tegi Pannu; Manni Sandhu</div>
+                </h4>
+                <div class="album">Schedule</div>
+                <div class="songDuration" id="sd">02:36</div>
+            </li>
+            <li class="songItem">
+                <span>73</span>
+                <i class="fa songPlay fa-play" id="133"></i>
+                <img src="/covers/all covers/133.jpg" alt="">
+                <h4 id="songName">Shape
+                    <div class="subtitle">Kaka</div>
+                </h4>
+                <div class="album">Another Side</div>
+                <div class="songDuration" id="sd">03:18</div>
+            </li>
+            <li class="songItem">
+                <span>74</span>
+                <i class="fa songPlay fa-play" id="134"></i>
+                <img src="/covers/all covers/134.jpg" alt="">
+                <h4 id="songName">Sheesha
+                    <div class="subtitle">Karan Aujla</div>
+                </h4>
+                <div class="album">Sheesha</div>
+                <div class="songDuration" id="sd">02:55</div>
+            </li>
+            <li class="songItem">
+                <span>75</span>
+                <i class="fa songPlay fa-play" id="135"></i>
+                <img src="/covers/all covers/135.jpg" alt="">
+                <h4 id="songName">Showstopper
+                    <div class="subtitle">JERRY</div>
+                </h4>
+                <div class="album">Showstopper</div>
+                <div class="songDuration" id="sd">02:26</div>
+            </li>
+            <li class="songItem">
+                <span>76</span>
+                <i class="fa songPlay fa-play" id="136"></i>
+                <img src="/covers/all covers/136.jpg" alt="">
+                <h4 id="songName">Sit Down
+                    <div class="subtitle">Prem Dhillon; Snappy</div>
+                </h4>
+                <div class="album">Limitless</div>
+                <div class="songDuration" id="sd">03:44</div>
+            </li>
+            <li class="songItem">
+                <span>77</span>
+                <i class="fa songPlay fa-play" id="137"></i>
+                <img src="/covers/all covers/137.jpg" alt="">
+                <h4 id="songName">Sleepless
+                    <div class="subtitle">AP Dhillon</div>
+                </h4>
+                <div class="album">Sleepless</div>
+                <div class="songDuration" id="sd">02:36</div>
+            </li>
+            <li class="songItem">
+                <span>78</span>
+                <i class="fa songPlay fa-play" id="138"></i>
+                <img src="/covers/all covers/138.jpg" alt="">
+                <h4 id="songName">Softly
+                    <div class="subtitle">Karan Aujla; Ikky</div>
+                </h4>
+                <div class="album">Making Memories</div>
+                <div class="songDuration" id="sd">02:56</div>
+            </li>
+            <li class="songItem">
+                <span>79</span>
+                <i class="fa songPlay fa-play" id="139"></i>
+                <img src="/covers/all covers/139.jpg" alt="">
+                <h4 id="songName">SPAIN
+                    <div class="subtitle">Jassa Dhillon; thiarajxtt</div>
+                </h4>
+                <div class="album">VIBIN</div>
+                <div class="songDuration" id="sd">02:17</div>
+            </li>
+            <li class="songItem">
+                <span>80</span>
+                <i class="fa songPlay fa-play" id="140"></i>
+                <img src="/covers/all covers/140.jpg" alt="">
+                <h4 id="songName">Still Rollin
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">Still Rollin</div>
+                <div class="songDuration" id="sd">02:51</div>
+            </li>
+            <li class="songItem">
+                <span>81</span>
+                <i class="fa songPlay fa-play" id="141"></i>
+                <img src="/covers/all covers/141.jpg" alt="">
+                <h4 id="songName">Summer High
+                    <div class="subtitle">AP Dhillon</div>
+                </h4>
+                <div class="album">Summer High</div>
+                <div class="songDuration" id="sd">03:25</div>
+            </li>
+            <li class="songItem">
+                <span>82</span>
+                <i class="fa songPlay fa-play" id="142"></i>
+                <img src="/covers/all covers/142.jpg" alt="">
+                <h4 id="songName">Sunday
+                    <div class="subtitle">Dilpreet Dhillon; Gurlez Akhtar</div>
+                </h4>
+                <div class="album">Let's Go</div>
+                <div class="songDuration" id="sd">03:36</div>
+            </li>
+            <li class="songItem">
+                <span>83</span>
+                <i class="fa songPlay fa-play" id="143"></i>
+                <img src="/covers/all covers/143.jpg" alt="">
+                <h4 id="songName">SWITCHIN' LANES
+                    <div class="subtitle">Tegi Pannu; Sukha; Manni Sandhu</div>
+                </h4>
+                <div class="album">SWITCHIN' LANES</div>
+                <div class="songDuration" id="sd">02:12</div>
+            </li>
+            <li class="songItem">
+                <span>84</span>
+                <i class="fa songPlay fa-play" id="144"></i>
+                <img src="/covers/all covers/144.jpg" alt="">
+                <h4 id="songName">Take It Easy
+                    <div class="subtitle">Karan Aujla; Ikky</div>
+                </h4>
+                <div class="album">Four You</div>
+                <div class="songDuration" id="sd">02:54</div>
+            </li>
+            <li class="songItem">
+                <span>85</span>
+                <i class="fa songPlay fa-play" id="145"></i>
+                <img src="/covers/all covers/145.jpg" alt="">
+                <h4 id="songName">Tareefan
+                    <div class="subtitle">Jordan Sandhu; Mehar Vaani</div>
+                </h4>
+                <div class="album">Tareefan</div>
+                <div class="songDuration" id="sd">03:12</div>
+            </li>
+            <li class="songItem">
+                <span>86</span>
+                <i class="fa songPlay fa-play" id="146"></i>
+                <img src="/covers/all covers/146.jpg" alt="">
+                <h4 id="songName">Taur
+                    <div class="subtitle">Lopon Sidhu</div>
+                </h4>
+                <div class="album">Sidhuan De Munde</div>
+                <div class="songDuration" id="sd">02:41</div>
+            </li>
+            <li class="songItem">
+                <span>87</span>
+                <i class="fa songPlay fa-play" id="147"></i>
+                <img src="/covers/all covers/147.jpg" alt="">
+                <h4 id="songName">Thaa
+                    <div class="subtitle">Varinder Brar; Rav Dhaliwal; Ultra Beats</div>
+                </h4>
+                <div class="album">Thaa</div>
+                <div class="songDuration" id="sd">03:20</div>
+            </li>
+            <li class="songItem">
+                <span>88</span>
+                <i class="fa songPlay fa-play" id="148"></i>
+                <img src="/covers/all covers/148.jpg" alt="">
+                <h4 id="songName">The Last Ride
+                    <div class="subtitle">Sidhu Moose Wala; Wazir Patar</div>
+                </h4>
+                <div class="album">The Last Ride</div>
+                <div class="songDuration" id="sd">04:35</div>
+            </li>
+            <li class="songItem">
+                <span>89</span>
+                <i class="fa songPlay fa-play" id="149"></i>
+                <img src="/covers/all covers/149.jpg" alt="">
+                <h4 id="songName">These Days (feat. Bohemia)
+                    <div class="subtitle">Sidhu Moose Wala; Bohemia</div>
+                </h4>
+                <div class="album">Moosetape</div>
+                <div class="songDuration" id="sd">03:31</div>
+            </li>
+            <li class="songItem">
+                <span>90</span>
+                <i class="fa songPlay fa-play" id="150"></i>
+                <img src="/covers/all covers/150.jpg" alt="">
+                <h4 id="songName">Todh
+                    <div class="subtitle">Prince Narula; Munawar Faruqui; Rony Ajnali</div>
+                </h4>
+                <div class="album">Todh</div>
+                <div class="songDuration" id="sd">04:04</div>
+            </li>
+            <li class="songItem">
+                <span>91</span>
+                <i class="fa songPlay fa-play" id="151"></i>
+                <img src="/covers/all covers/151.jpg" alt="">
+                <h4 id="songName">Top Flame
+                    <div class="subtitle">JERRY</div>
+                </h4>
+                <div class="album">Top Flame</div>
+                <div class="songDuration" id="sd">02:43</div>
+            </li>
+            <li class="songItem">
+                <span>92</span>
+                <i class="fa songPlay fa-play" id="152"></i>
+                <img src="/covers/all covers/152.jpg" alt="">
+                <h4 id="songName">Top Notch Gabru
+                    <div class="subtitle">Vicky</div>
+                </h4>
+                <div class="album">Top Notch Gabru</div>
+                <div class="songDuration" id="sd">02:43</div>
+            </li>
+            <li class="songItem">
+                <span>93</span>
+                <i class="fa songPlay fa-play" id="153"></i>
+                <img src="/covers/all covers/153.jpg" alt="">
+                <h4 id="songName">True Stories
+                    <div class="subtitle">AP Dhillon; Shinda Kahlon</div>
+                </h4>
+                <div class="album">True Stories</div>
+                <div class="songDuration" id="sd">02:01</div>
+            </li>
+            <li class="songItem">
+                <span>94</span>
+                <i class="fa songPlay fa-play" id="154"></i>
+                <img src="/covers/all covers/154.jpg" alt="">
+                <h4 id="songName">Try Me
+                    <div class="subtitle">Karan Aujla; Ikky</div>
+                </h4>
+                <div class="album">Making Memories</div>
+                <div class="songDuration" id="sd">03:25</div>
+            </li>
+            <li class="songItem">
+                <span>95</span>
+                <i class="fa songPlay fa-play" id="155"></i>
+                <img src="/covers/all covers/155.jpg" alt="">
+                <h4 id="songName">Watch Out
+                    <div class="subtitle">Sidhu Moose Wala; Sikander Kahlon; Mxrci</div>
+                </h4>
+                <div class="album">Watch Out</div>
+                <div class="songDuration" id="sd">03:56</div>
+            </li>
+            <li class="songItem">
+                <span>96</span>
+                <i class="fa songPlay fa-play" id="156"></i>
+                <img src="/covers/all covers/156.jpg" alt="">
+                <h4 id="songName">We Rollin
+                    <div class="subtitle">Subh</div>
+                </h4>
+                <div class="album">We Rollin</div>
+                <div class="songDuration" id="sd">03:34</div>
+            </li>
+            <li class="songItem">
+                <span>97</span>
+                <i class="fa songPlay fa-play" id="157"></i>
+                <img src="/covers/all covers/157.jpg" alt="">
+                <h4 id="songName">White Brown Black
+                    <div class="subtitle">Avvy Sra; Karan Aujla; Jaani</div>
+                </h4>
+                <div class="album">White Brown Black</div>
+                <div class="songDuration" id="sd">02:50</div>
+            </li>
+            <li class="songItem">
+                <span>98</span>
+                <i class="fa songPlay fa-play" id="158"></i>
+                <img src="/covers/all covers/158.jpg" alt="">
+                <h4 id="songName">With You
+                    <div class="subtitle">AP Dhillon</div>
+                </h4>
+                <div class="album">With You </div>
+                <div class="songDuration" id="sd">02:35</div>
+            </li>
+            <li class="songItem">
+                <span>99</span>
+                <i class="fa songPlay fa-play" id="159"></i>
+                <img src="/covers/all covers/159.jpg" alt="">
+                <h4 id="songName">Yeah Naah
+                    <div class="subtitle">Karan Aujla; Ikky</div>
+                </h4>
+                <div class="album">Four You</div>
+                <div class="songDuration" id="sd">03:08</div>
+            </li>
+            <li class="songItem">
+                <span>100</span>
+                <i class="fa songPlay fa-play" id="160"></i>
+                <img src="/covers/all covers/160.jpg" alt="">
+                <h4 id="songName">Ykwim
+                    <div class="subtitle">Karan Aujla; KR$NA; Mehar Vaani</div>
+                </h4>
+                <div class="album">Ykwim</div>
+                <div class="songDuration" id="sd">03:38</div>
+            </li>
+
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/58fcaacfd6.js" crossorigin="anonymous"></script>
+    <script src="app2.js"></script>
+</body>
+
+</html>
